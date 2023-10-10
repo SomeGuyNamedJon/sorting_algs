@@ -1,6 +1,8 @@
 #include <vector>
 #ifndef MERGE_SORT_H
 #define MERGE_SORT_H
-std::vector<int> partition(std::vector<int>);
-std::vector<int> quickSort(std::vector<int>);
+int partition(int*,int,int);
+void quickSort(int*,int,int);
+int partition(std::vector<int>&,int,int);
+void quickSort(std::vector<int>&,int,int);
 #endif
