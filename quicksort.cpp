@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using itr = vector::iterator;
+using itr = vector<int>::iterator;
 
 int partition(int* arr, int low, int high){
   int pivot = arr[low];
