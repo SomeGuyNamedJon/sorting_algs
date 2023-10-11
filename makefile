@@ -12,8 +12,8 @@ quicksort:
 driver: mergesort insertsort
 	g++ driver.cpp -o main mergesort.o insertsort.o
 
-test: mergesort insertsort quicksort
-	g++ test.cpp -o test mergesort.o insertsort.o quicksort.o
+test: quicksort
+	g++ test.cpp -o test quicksort.o
 
 clean:
 	rm -f *.o main test
