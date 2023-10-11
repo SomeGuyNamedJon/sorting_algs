@@ -6,11 +6,14 @@ mergesort:
 insertsort:
 	g++ insertsort.cpp -c -o insertsort.o
 
+quicksort:
+	g++ quicksort.cpp -c -o quicksort.o
+
 driver: mergesort insertsort
 	g++ driver.cpp -o main mergesort.o insertsort.o
 
-test: mergesort insertsort
-	g++ test.cpp -o test mergesort.o insertsort.o
+test: mergesort insertsort quicksort
+	g++ test.cpp -o test mergesort.o insertsort.o quicksort.o
 
 clean:
 	rm -f mergesort.o insertsort.o main

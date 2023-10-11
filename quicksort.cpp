@@ -37,5 +37,7 @@ void quickSort(int* arr, int low, int high){
   }
 }
 
-int partition(vector<int>& vect, itr low, itr high){}
+int partition(vector<int>& vect, itr low, itr high){
+  return 0;
+}
 void quickSort(vector<int>& vect, itr low, itr high){}
