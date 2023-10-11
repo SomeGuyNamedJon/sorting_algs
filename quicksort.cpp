@@ -37,7 +37,39 @@ void quickSort(int* arr, int low, int high){
   }
 }
 
-int partition(vector<int>& vect, itr low, itr high){
-  return 0;
+itr partition(vector<int>& vect, itr low, itr high){
+  int pivot = *low;
+  int count = 0;
+  
+  for(itr i = low; i != high; i++){
+    if(*i <= pivot)
+      count++;
+  }
+
+  itr pivotItr = low + count;
+
+  iter_swap(pivotItr, low);
+
+  itr i=low, j=high;
+  while(i != pivotItr && j != pivotItr){
+    while(*i <= pivot)
+      i++;
+    while(*j > pivot)
+      j--;
+
+    if(i != pivotItr && j != pivotItr)
+      iter_swap(i++, j--);
+
+  }
+
+  return pivotItr;
 }
-void quickSort(vector<int>& vect, itr low, itr high){}
+void quickSort(vector<int>& vect, itr low, itr high){
+  if(distance(low,high) > 0){
+    itr pItr = partition(vect, low, high);
+
+    quickSort(vect, low, pItr-1);
+    quickSort(vect, pItr+1, high);
+
+  }
+}
