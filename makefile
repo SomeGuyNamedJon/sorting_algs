@@ -9,7 +9,7 @@ insertsort:
 quicksort:
 	g++ quicksort.cpp -c -o quicksort.o
 
-hybridsort: mergesort insertsort
+hybridsort:
 	g++ hybridsort.cpp -c -o hybridsort.o
 
 driver: mergesort
