@@ -1,5 +1,4 @@
 #include <vector>
-#include "insertsort.hpp"
 using namespace std;
 
 int* merge(int* a, int* b, size_t aSize, size_t bSize){
@@ -75,20 +74,6 @@ int* mergeSort(int* arr, size_t size){
 vector<int> mergeSort(vector<int> v){
   if(v.size() <= 1){
     return v;
-  }
-
-  vector<int> v1(v.begin(), v.begin() + v.size()/2);
-  vector<int> v2(v.begin() + v.size()/2, v.end());
-  
-  v1 = mergeSort(v1);
-  v2 = mergeSort(v2);
-
-  return merge(v1, v2);
-}
-
-vector<int> improvedMergeSort(vector<int> v){
-  if(v.size() <= 7){
-    return insertSort(v);
   }
 
   vector<int> v1(v.begin(), v.begin() + v.size()/2);
