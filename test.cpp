@@ -5,16 +5,16 @@ using namespace std;
 
 int main(){
   size_t size = 10;
-  int* arr = new int[size];
+  vector<int> vect;
   for(int i=0; i<size; i++){
-    arr[i] = rand() % 500;
-    cout << arr[i] << " ";
+    vect.push_back(rand() % 500);
+    cout << vect[i] << " ";
   }
   cout << endl << endl;
 
-  quickSort(arr,0,size-1);
+  quickSort(vect,vect.begin(),vect.end()-1);
 
   for(int i=0; i<size; i++)
-    cout << arr[i] << " ";
+    cout << vect[i] << " ";
   cout << endl;
 }
