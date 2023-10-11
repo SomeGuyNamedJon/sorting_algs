@@ -16,5 +16,5 @@ test: mergesort insertsort quicksort
 	g++ test.cpp -o test mergesort.o insertsort.o quicksort.o
 
 clean:
-	rm -f mergesort.o insertsort.o main
+	rm -f *.o main test
 
